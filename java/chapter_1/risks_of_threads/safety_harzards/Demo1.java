@@ -1,7 +1,5 @@
 package chapter_1.risks_of_threads.safety_harzards;
 
-import java.time.LocalDateTime;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Demo1 {
@@ -81,6 +79,7 @@ class SafeSequenceWithAtomic implements MySequence {
 // implemented by the book using synchronized
 class SafeSequence implements MySequence {
     private int value;
+
     @Override
     public synchronized int getNext() {
         return value++;
